@@ -1,0 +1,125 @@
+@import './variables/main';
+@include resetStyles;
+
+.principalWrapper {
+    @media (min-width:200px){
+        width: 100%;
+    }
+
+    @media (min-width:1200px){
+        width: 1200px;
+    }
+}
+
+/* Sart Splash */
+
+#Splash {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgb(44, 44, 44);
+    display: flex;
+    flex-direction: column;
+    align-items: center;transition: opacity 1s;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    z-index: 99;
+    img{
+        width: 15vh;
+        height: 15vh;
+    }
+}
+
+#Splash.fade{
+    opacity: 0;
+    display: none;
+}
+
+/* Finish Splash */
+
+/* Start Mobile First */
+
+.login-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .logo-content{
+        padding-top: 6rem;
+        img{
+            width: 70px;
+            height: 70px;
+        }
+    }
+    .form-content{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: start;
+        margin: 2rem;
+
+        .text-login{
+            p{
+                font-weight: 600;
+                font-family: $main-font-lato;
+            }
+        }
+
+        .form-login{
+            margin: 0.2rem 0 ;
+            input{
+                margin: 0.4rem 0;
+                background-color: rgba(234, 234, 234, 0.49);
+                border-radius: 10px;
+                width: 100%;
+                height: 2rem;
+                border:1px solid rgba(0, 0, 0, 0.17);
+            }
+        }
+    }
+    .button-login{
+
+        button{
+            border-radius: 10px;
+            height: 3rem;
+            width: 8rem;
+            font-size: 1rem;
+            font-family: $main-font-lato;
+            font-weight: 500;
+        }
+    }
+    .textRegister-login{
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+        font-family: $main-font-lato;
+        div{
+            margin: 0.2rem;
+            a{
+                color: #2299F8;
+            }
+        }
+    }
+    .textAccount-login{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .content-cards{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            li{
+                margin: 0.5rem;
+                border: rgba(192, 192, 192, 0) 1px solid;
+                border-radius: 1rem;
+                background: #f0f0f0;
+                div{
+                    margin: 1rem 1.5rem;
+                    width: 30px;
+                    height: auto 0;
+                }
+            }
+        }
+    }
+}
